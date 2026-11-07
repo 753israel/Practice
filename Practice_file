@@ -2,31 +2,32 @@ import pathlib
 
 
 
-
-# def load_data():
+# אופציה א
+# def load_data(path:pathlib.Path)->list:
 #     dic_data = {}
-#     with open(path_file) as file:
+#     with open(path) as file:
 #         for city in file:
-#             city = city.strip().split(":")
-#             key = city[0]
-#             value = int(city[1])
-#             dic_data[key] = value
+#             city = city.strip().split(":") #כל שורה["Israel",3] מפצל את זה ל-2
+#             key = city[0]         #  key = "Israel"
+#             value = int(city[1])  # value = 3
+#             dic_data[key] = value #[key,value] = ["Israel"] = 3
 #         return dic_data
 
-# def multiplay(data):
-#     for k,v in data.items():
+# def multiplay(data:dict)->None:
+#     for k,v in data.items(): # עובר על המילון
 #         data[k] = v * 2
+#         #data[k] = int(data[k]) * 2
 #     return data
 
-# def save_data(data):
-#     with open(path_file,mode="w") as file:
+# def save_data(data:dict,path:pathlib.Path)->None:
+#     with open(path,mode="w") as file:
 #         for key , value in data.items():
 #             file.write(f"{key}:{value}\n") 
 
-
-# data = load_data() # מקבל נתונים ומחזיר מילון
+# path = pathlib.Path("cities.txt")
+# data = load_data(path) # מקבל נתונים ומחזיר מילון
 # result = multiplay(data) # מקבל מילון ומחזיר ערך
-# save_data(result) # שומר את הערך
+# save_data(result,path) # שומר את הערך
 
 
 # # אופציה ב
