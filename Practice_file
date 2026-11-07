@@ -1,3 +1,8 @@
+import pathlib
+
+
+
+
 # def load_data():
 #     dic_data = {}
 #     with open(path_file) as file:
@@ -25,22 +30,24 @@
 
 
 # # אופציה ב
-# def load_data():
+# def load_data(path:pathlib.Path)->list:
 #     lis_data = []
-#     with open(path_file) as file:
-#         for data in file:
-#             data = data.strip().split(":")
+#     with open(path) as file:
+#         for data in file: # עובר על הקובץ
+#             data = data.strip().split(":") # מפצל לפי ":" ומוריד ירידת שורה
 #             lis_data.append(data)
 #         return lis_data
-# def mulitiplay(data):
-#     for i in data:
-#         i[1] = int(i[1])* 2
 
-# def seve_data(data):
-#     with open(path_file,mode="w") as file:
+# def mulitiplay(data:list)->None:
+#     for i in data: # עובר על הקבצים
+#         i[1] = int(i[1])* 2 # מכפיל רק את המקום של המספרים
+
+# def seve_data(data:list,path:pathlib.Path)->None:
+#     with open(path,mode="w") as file:
 #             for k in data:
-#                 file.write(f"{k[0]}:{k[1]}\n") 
+#                 file.write(f"{k[0]}: {k[1]}\n") 
 
-# data = load_data()
-# mulitiplay(data)
-# seve_data(data)
+# path = pathlib.Path("cities.txt")
+# data = load_data(path) # נותן לה את הנתיב
+# mulitiplay(data)    # מכפיל את הרשימה
+# seve_data(data,path) # שומר את הנתונים
