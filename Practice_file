@@ -1,1 +1,46 @@
+# def load_data():
+#     dic_data = {}
+#     with open(path_file) as file:
+#         for city in file:
+#             city = city.strip().split(":")
+#             key = city[0]
+#             value = int(city[1])
+#             dic_data[key] = value
+#         return dic_data
 
+# def multiplay(data):
+#     for k,v in data.items():
+#         data[k] = v * 2
+#     return data
+
+# def save_data(data):
+#     with open(path_file,mode="w") as file:
+#         for key , value in data.items():
+#             file.write(f"{key}:{value}\n") 
+
+
+# data = load_data() # מקבל נתונים ומחזיר מילון
+# result = multiplay(data) # מקבל מילון ומחזיר ערך
+# save_data(result) # שומר את הערך
+
+
+# # אופציה ב
+# def load_data():
+#     lis_data = []
+#     with open(path_file) as file:
+#         for data in file:
+#             data = data.strip().split(":")
+#             lis_data.append(data)
+#         return lis_data
+# def mulitiplay(data):
+#     for i in data:
+#         i[1] = int(i[1])* 2
+
+# def seve_data(data):
+#     with open(path_file,mode="w") as file:
+#             for k in data:
+#                 file.write(f"{k[0]}:{k[1]}\n") 
+
+# data = load_data()
+# mulitiplay(data)
+# seve_data(data)
