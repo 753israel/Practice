@@ -1,0 +1,3 @@
+Israel:10
+USA:7
+Germany:5
